@@ -1,8 +1,10 @@
 /**
  * @type {import('next').NextConfig}
  */
+const isProd = process.env.Node_ENV = 'production';
 const nextConfig = {
     output: 'export',
+    basePath: isProd ? '/nextjs-blog-deployment' : '',
    
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
     // trailingSlash: true,
